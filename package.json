@@ -32,7 +32,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://ggyaal.github.io/nomflix",
+  "homepage": "https://amazing-bardeen-8532b3.netlify.app/",
   "browserslist": {
     "production": [
       ">0.2%",
