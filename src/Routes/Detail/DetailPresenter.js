@@ -79,6 +79,16 @@ const IMDB = styled.span`
     background: linear-gradient(0deg, #886f0b 0%, #deb100 50%, #fadf75 75%, #f1c40f 100%);
 `;
 
+const Homepage = styled.span`
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    background: linear-gradient(0deg, #1a6891 0%, #2aa0d2 15%, #98d3eb 70%, #2aa0d2 100%);
+`;
+
 const More = styled.div`
     width: 80%;
 `;
@@ -123,6 +133,14 @@ const DetailPresenter = ({ result, loading, error }) => (
                                 </IMDB>
                             </Item>
                         ): null}
+                        {(result.homepage && result.homepage.length > 0)? (
+                            <Item>
+                                <Homepage>
+                                    <a href={result.homepage} target="_blank">HOMEPAGE</a>
+                                </Homepage>
+                            </Item>
+                        ): null}
+
                     </ItemContainer>
                     <MenuBar />
                     <More>
