@@ -116,7 +116,13 @@ const DetailPresenter = ({ result, loading, error }) => (
                             )
                         }
                         </Item>
-                        <Item><IMDB><a href={`https://www.imdb.com/title/${result.imdb_id}`} target="_blank">IMDB</a></IMDB></Item>
+                        {(result.imdb_id && result.imdb_id.length > 0)? (
+                            <Item>
+                                <IMDB>
+                                    <a href={`https://www.imdb.com/title/${result.imdb_id}`} target="_blank">IMDB</a>
+                                </IMDB>
+                            </Item>
+                        ): null}
                     </ItemContainer>
                     <MenuBar />
                     <More>
