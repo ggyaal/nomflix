@@ -34,8 +34,18 @@ const SLink = styled(Link)`
     justify-content: center;
 `;
 
+const Title = styled.div`
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-right: 50px;
+    color: #c0392b;
+    font-weight: 800;
+    padding: 5px;
+`;
+
 export default withRouter(({ location: { pathname } }) => (
     <Header>
+        <Title><SLink to="/">GGYFlix</SLink></Title>
         <List>
             <Item current={pathname === "/"}>
                 <SLink to="/">Movies</SLink>
